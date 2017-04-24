@@ -1,0 +1,14 @@
+.nav {
+	text-align: center;
+	background-color: #80cd92;
+	border-bottom: black solid 5px;
+}
+#title {
+	font-size: 100px;
+}
+#title2 {
+	font-size: 25px;
+}
+h2, h5 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
