@@ -2,6 +2,10 @@
 	text-align: center;
 	background-color: #80cd92;
 	border-bottom: black solid 5px;
+	
+}
+.nav h1 {
+	margin-top: 5px;
 }
 #title {
 	font-size: 100px;

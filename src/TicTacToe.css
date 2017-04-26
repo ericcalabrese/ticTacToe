@@ -1,5 +1,6 @@
 h1 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	color: black;
 }
 .board {
 	display: flex;
@@ -8,7 +9,7 @@ h1 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin: 3% auto;
+	margin: 2% auto;
 	position: relative;
 }
 .square {
@@ -21,17 +22,15 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	border-radius: 1px;
-
 }
- .square:hover {
+.square:hover {
  	cursor: pointer;
  	background-color: #80cd92;
  }
- .button {
-/* 	margin: 2% auto;
-*/
-	position: absolute;
-	margin: 1% 46%;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 25px;
- }
+footer {
+	border-top: solid #DAD9D9 1px;
+}
+footer p {
+	margin-top: 2px;
+	margin-left: 2%;
+}

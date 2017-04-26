@@ -1,5 +1,7 @@
 h1 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 7em;
+	color: black;
 }
 .frame {
 	display: flex;
@@ -8,32 +10,31 @@ h1 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin: 3% auto;
+	margin: 2% auto;
 	position: relative;
 	border-radius: 1px;
 	border: 5px solid black;
 }
-.square {
-	height: 150px;
-	width: 150px;
-	box-sizing: border-box;
-	border: 5px solid black;
-	font-size: 5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 1px;
-
+#text {
+	margin-top: 20%;
+	margin-left: 28%;
+	margin-bottom: 10%;
 }
- .square:hover {
- 	cursor: pointer;
- 	background-color: #80cd92;
- }
- .button {
-/* 	margin: 2% auto;
-*/
-	position: absolute;
-	margin: 1% 46%;
+footer {
+	border-top: solid #DAD9D9 1px;
+}
+footer p {
+	margin-top: 2px;
+	margin-left: 2%;
+}
+.playAgain button {
+ 	position: absolute;
+ 	top: 65%;
+ 	right: 38%;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 25px;
- }
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+	border: solid 1px black;
+}

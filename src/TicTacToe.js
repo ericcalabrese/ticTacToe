@@ -19,12 +19,12 @@ export default class TicTacToe extends Component {
 		}
 
     this.reset = this.reset.bind(this);
+    
 	}
 
 	handleClick(index) {
     if(this.state.board[index] === "" && !this.state.winner) {
       this.state.board[index] = this.state.currentTurn
-      console.log(this.checkForWinner())
       this.setState({
         board: this.state.board,
         currentTurn: this.state.currentTurn === this.state.PLAYER_ONE_SYMBOL ? this.state.PLAYER_TWO_SYMBOL : this.state.PLAYER_ONE_SYMBOL,
@@ -32,72 +32,51 @@ export default class TicTacToe extends Component {
         winnerXO: this.state.currentTurn === this.state.PLAYER_ONE_SYMBOL ? this.state.PLAYER_ONE_SYMBOL : this.state.PLAYER_TWO_SYMBOL,
       	})
     } 
-    if (this.state.winner) {
-    	console.log("Hello");
-    } else {
-    	this.setState({
-    		gameScreen: 'start'
-    	})
-    }
-      
-      // console.log("this.state.currentTurn"+this.state.currentTurn);
-      // console.log("this.state.winnerXO"+this.state.winnerXO);
-      // console.log("this.state.winner"+this.state.winner);
-
 	}
 
 	checkForWinner() {
     var currentTurn = this.state.currentTurn
     console.log("currentTurn : ", currentTurn)
     var symbols = this.state.board
-  	// console.log("Dick"+this.state.winner);
     var winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-    return winningCombos.find(function(combo) {
-      if(symbols[combo[0]] !== "" && symbols[combo[1]] !== ""  && symbols[combo[2]] !== ""  && symbols[combo[0]] === symbols[combo[1]] && symbols[combo[1]] === symbols[combo[2]]) {
-        return currentTurn
-      } else {
-        return false
-      }
-    })
-    if (this.state.winner) {
-    	this.setState({
-    	gameScreen: 'winner'
-    	})
-    } else {
-    	this.setState({
-    		gameScreen: 'start'
-    	})
-    }
+	    return winningCombos.find(function(combo) {
+	      if(symbols[combo[0]] !== "" && symbols[combo[1]] !== ""  && symbols[combo[2]] !== ""  && symbols[combo[0]] === symbols[combo[1]] && symbols[combo[1]] === symbols[combo[2]]) {
+	        return currentTurn
+	      } else {
+	        return false
+	      }
+	    })
+  	}
 
-  }
-  reset() {
-  	console.log("I just did a reset");
-    this.setState({
-      board: ["", "", "", "", "", "", "", "", ""],
-      winner: null,
-      winnerXO: "",
-      gameScreen: 'start'
-    })
-  }
+	reset() {
+	  	console.log("I just did a reset");
+	    this.setState({
+	      board: ["", "", "", "", "", "", "", "", ""],
+	      winner: null,
+	      winnerXO: "",
+	      gameScreen: 'start'
+	    })
+	}
 
   render() {  	
     return (
   		<div>
-			{this.state.winner ? < Winner winner={this.state.winnerXO} /> : 
+			{this.state.winner ? < Winner winner={this.state.winnerXO} reset={this.reset}/> : 
 			<div>
 		        <div className="board">
 		        {this.state.board.map((cell, index) => {
 		           	return <div key={index} onClick={() => this.handleClick(index)} className="square">{cell}</div>
 		           	})
 	            }
-	        	</div>
-		        }        	
-		    </div>
-		}
-    	</div>
-
-		    	
-		    	
-    		);
+	        	</div>       	 
+			    <footer>
+			        <div>
+			   	    	<p>Copyright &copy; Eric Calabrese 2017</p>
+			        </div>
+		        </footer>
+	        </div>
+			}
+    	</div>   	
+    	);
   	}
 }
