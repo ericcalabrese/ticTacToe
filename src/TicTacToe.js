@@ -14,7 +14,6 @@ export default class TicTacToe extends Component {
 				"", "", "", "", "", "", "", "", ""
 			],
 			winner: null,
-			gameScreen: 'start',
 			winnerXO: ""
 		}
 
@@ -53,8 +52,7 @@ export default class TicTacToe extends Component {
 	    this.setState({
 	      board: ["", "", "", "", "", "", "", "", ""],
 	      winner: null,
-	      winnerXO: "",
-	      gameScreen: 'start'
+	      winnerXO: ""
 	    })
 	}
 
