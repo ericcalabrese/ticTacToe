@@ -1,0 +1,11 @@
+footer {
+	border-top: solid #DAD9D9 1px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+footer p {
+	margin-top: 2px;
+	margin-left: 2%;
+}

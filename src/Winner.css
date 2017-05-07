@@ -20,12 +20,10 @@ h1 {
 	margin-left: 28%;
 	margin-bottom: 10%;
 }
-footer {
-	border-top: solid #DAD9D9 1px;
-}
-footer p {
-	margin-top: 2px;
-	margin-left: 2%;
+#draw{
+	margin-top: 20%;
+	margin-left: 20%;
+	margin-bottom: 10%;
 }
 .playAgain button {
  	position: absolute;
